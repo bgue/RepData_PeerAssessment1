@@ -125,10 +125,10 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#processing---loading-the-data">Processing - loading the data</a></li>
+<li><a href="#question-0.-processing---loading-the-data">Question 0. Processing - loading the data</a></li>
 <li><a href="#question-1">Question 1</a></li>
-<li><a href="#question-2">Question 2</a></li>
-<li><a href="#question-3">Question 3</a><ul>
+<li><a href="#question-2">Question 2</a><ul>
+<li><a href="#question-3">Question 3</a></li>
 <li><a href="#question-4">Question 4</a></li>
 <li><a href="#qeustion-5">Qeustion 5</a></li>
 </ul></li>
@@ -142,8 +142,8 @@ $(document).ready(function () {
 </ul>
 </div>
 
-<div id="processing---loading-the-data" class="section level3">
-<h3>Processing - loading the data</h3>
+<div id="question-0.-processing---loading-the-data" class="section level3">
+<h3>Question 0. Processing - loading the data</h3>
 <pre class="r"><code>library(dplyr)</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
@@ -244,12 +244,12 @@ sum_data</code></pre>
 ## 59 2012-11-28 10183   339120
 ## 60 2012-11-29  7047   339120
 ## 61 2012-11-30     0   339120</code></pre>
-</div>
-<div id="question-3" class="section level2">
-<h2>Question 3</h2>
+<div id="question-3" class="section level3">
+<h3>Question 3</h3>
 <p>Make a histogram of the total number of steps taken each day</p>
 <pre class="r"><code>qplot(sum_data$steps, geom=&quot;histogram&quot;, binwidth=2000)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-4-1.png" /><!-- --></p>
+</div>
 <div id="question-4" class="section level3">
 <h3>Question 4</h3>
 <p>Calculate and report the mean and median of the total number of steps taken per day.</p>
@@ -276,7 +276,7 @@ with( dailydata, plot(interval,si,
                     xlab=&quot;Five minute intervals&quot;,
                     ylab=&quot;Steps (avg)&quot;)
    )</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-6-1.png" /><!-- --></p>
 <pre class="r"><code>with(dailydata,interval[which.max(si)])</code></pre>
 <pre><code>## [1] 835</code></pre>
 <p>The max steps are at 8:35 am - perhaps when people are walking into their offices.</p>
@@ -329,7 +329,7 @@ head(imputed_data)</code></pre>
 <p>There are no remaining NA values ### Question 7 Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
 <pre class="r"><code>sum_data &lt;- aggregate(. ~ date, data=data, FUN=sum)
 qplot(sum_data$steps, geom=&quot;histogram&quot;, binwidth=2000)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-10-1.png" /><!-- --></p>
 <pre class="r"><code>summary(sum_data)</code></pre>
 <pre><code>##          date        steps          interval     
 ##  2012-10-01: 1   Min.   :    0   Min.   :339120  
@@ -368,7 +368,7 @@ xyplot(steps ~ interval | day,
        layout = c(1,2), 
        xlab=&quot;Time interval (5 minutes)&quot;, 
        ylab=&quot;Steps&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-11-1.png" width="672" /> That’s not a pretty panel plot , but it provide the comparison. The interpretations are: * Participants wake up later on weekends * After a flurry of activity during the morning, peaking around 830, participants have a net lower activity level during the remainder of the day on weekdays vs. weekends.</p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-11-1.png" /><!-- --> That’s not a pretty panel plot , but it provide the comparison. The interpretations are: * Participants wake up later on weekends * After a flurry of activity during the morning, peaking around 830, participants have a net lower activity level during the remainder of the day on weekdays vs. weekends.</p>
 </div>
 <div id="appendix-a-assignment-text" class="section level3">
 <h3>Appendix A: Assignment Text</h3>
